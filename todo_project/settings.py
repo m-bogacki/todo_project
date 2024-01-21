@@ -139,6 +139,8 @@ SPECTACULAR_SETTINGS = {
     # OTHER SETTINGS
 }
 
+AUTHENTICATION_BACKENDS = ['account.auth_backends.EmailBackend']
+
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
@@ -185,5 +187,5 @@ AUTH_USER_MODEL = 'account.User'
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=1),
-    "ALGORITHM": "HS256",
+    "ALGORITHM": "HS256"
 }

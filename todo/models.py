@@ -5,6 +5,8 @@ from account.models import User
 
 
 class Task(models.Model):
-    name = models.CharField(max_length=200)
-    due_date = models.DateField(blank=True,null=True)
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=200)
+    is_complete = models.BooleanField(default=False)
+    due_date = models.DateTimeField(blank=True,null=True)    
     author = models.ForeignKey(User, on_delete=models.CASCADE)

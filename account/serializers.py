@@ -5,11 +5,12 @@ class UserListSerializer(ModelSerializer):
     
     class Meta:
         model = User
-        exclude = ["user_permissions", "groups", "password", "is_staff", "first_name", "is_superuser", "last_login"]
+        fields = ["id", "email"]
 
 class UserCreateSerializer(ModelSerializer):
     
     class Meta:
         model = User
-        exclude = ["user_permissions", "groups"]
+        fields = ["email", "password"]
+    
 
